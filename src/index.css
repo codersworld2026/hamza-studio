@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', 'Inter', ui-serif, Georgia, serif;
+
+  --color-ink-900: #0b1733;
+  --color-ink-800: #11214a;
+  --color-ink-700: #1a2a5e;
+  --color-ink-500: #495680;
+  --color-ink-400: #6b78a3;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-300: #7da5ff;
+  --color-brand-500: #2563eb;
+  --color-brand-600: #1d4fd8;
+  --color-brand-700: #1640b3;
+
+  --color-peach-100: #ffe4d0;
+  --color-peach-200: #ffd2b3;
+  --color-peach-400: #ff9a5a;
+
+  --color-skysoft-100: #f1f5ff;
+  --color-skysoft-200: #e3edff;
+
+  --color-canvas: #f7f8fb;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-ink-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float-slow { animation: float-y 6s ease-in-out infinite; }
+.animate-float-med  { animation: float-y 5s ease-in-out infinite; animation-delay: -2s; }
+.animate-float-fast { animation: float-y 4.5s ease-in-out infinite; animation-delay: -3s; }
+
+/* Underline squiggle accent under "Grow" */
+.grow-underline {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M2 8 Q 50 0 100 6 T 198 4' stroke='%23ff9a5a' stroke-width='3' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.45em;
+  padding-bottom: 0.18em;
+}
