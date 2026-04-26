@@ -25,14 +25,19 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
         <a href="#" className="group flex items-center gap-3">
           <Logo className="h-12 w-12 transition-transform group-hover:-rotate-3 sm:h-14 sm:w-14" />
-          <span className="inline-flex items-baseline gap-1 text-[26px] font-extrabold tracking-tight sm:text-[32px]">
-            <span className="bg-gradient-to-br from-brand-600 via-brand-700 to-ink-900 bg-clip-text text-transparent">
-              Hamza Studio
+          <span className="flex flex-col leading-none">
+            <span className="inline-flex items-baseline gap-1 text-[26px] font-extrabold tracking-tight sm:text-[32px]">
+              <span className="bg-gradient-to-br from-brand-600 via-brand-700 to-ink-900 bg-clip-text text-transparent">
+                Hamza Studio
+              </span>
+              <span
+                aria-hidden
+                className="h-2 w-2 translate-y-[1px] rounded-full bg-peach-400 shadow-[0_0_0_3px_rgba(255,154,90,0.18)] sm:h-2.5 sm:w-2.5"
+              />
             </span>
-            <span
-              aria-hidden
-              className="h-2 w-2 translate-y-[1px] rounded-full bg-peach-400 shadow-[0_0_0_3px_rgba(255,154,90,0.18)] sm:h-2.5 sm:w-2.5"
-            />
+            <span className="font-script mt-1 text-[16px] font-bold leading-none tracking-tight text-ink-500 sm:text-[19px]">
+              “Just send me a voice note and consider it done.”
+            </span>
           </span>
         </a>
 
