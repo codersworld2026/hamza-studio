@@ -2,16 +2,10 @@ import { MessageCircle, Mail } from "lucide-react";
 import Logo from "./Logo.jsx";
 import { SOCIALS, WHATSAPP_URL, EMAIL_URL } from "../config/contact.js";
 
-/* Brand-correct inline SVG marks (lucide doesn't ship the new X / TikTok / IG glyphs cleanly) */
+/* Brand-correct inline SVG marks (lucide doesn't ship the new X / IG glyphs cleanly) */
 const XIcon = ({ className = "h-4 w-4" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
     <path d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.84l-5.36-6.99L4.16 22H.9l8.04-9.18L.62 2h7l4.84 6.39L18.244 2zm-1.2 18h1.84L7.05 4H5.13l11.91 16z" />
-  </svg>
-);
-
-const FacebookIcon = ({ className = "h-4 w-4" }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
-    <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.51 1.49-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.78 8.43-4.94 8.43-9.94z" />
   </svg>
 );
 
@@ -23,17 +17,9 @@ const InstagramIcon = ({ className = "h-4 w-4" }) => (
   </svg>
 );
 
-const TikTokIcon = ({ className = "h-4 w-4" }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
-    <path d="M16.5 3a5.4 5.4 0 0 0 4.5 4.5v3.05a8.45 8.45 0 0 1-4.5-1.32v6.27a6.5 6.5 0 1 1-6.5-6.5c.36 0 .72.03 1.07.09v3.18a3.32 3.32 0 1 0 2.43 3.23V3h3z" />
-  </svg>
-);
-
 const SOCIAL_LINKS = [
   { name: "X",         href: SOCIALS.x,         Icon: XIcon },
-  { name: "Facebook",  href: SOCIALS.facebook,  Icon: FacebookIcon },
   { name: "Instagram", href: SOCIALS.instagram, Icon: InstagramIcon },
-  { name: "TikTok",    href: SOCIALS.tiktok,    Icon: TikTokIcon },
 ];
 
 export default function Footer() {
