@@ -41,8 +41,7 @@ export default function Contact() {
       `Phone: ${form.phone || "(not provided)"}\n\n` +
       `Project idea:\n${form.idea}`;
 
-    const base = EMAIL_URL.startsWith("mailto:") ? EMAIL_URL : `mailto:${EMAIL_URL}`;
-    window.location.href = `${base}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `${EMAIL_URL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
