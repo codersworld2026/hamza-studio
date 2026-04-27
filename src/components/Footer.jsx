@@ -92,7 +92,16 @@ export default function Footer() {
         {/* Divider + bottom row */}
         <div className="mt-10 flex flex-col-reverse items-start justify-between gap-3 border-t border-ink-900/5 pt-6 text-[12.5px] text-ink-400 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Hamza Studio. All rights reserved.</p>
-          <p>Designed &amp; built by Hamza.</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="#privacy"
+              className="font-semibold text-ink-500 transition-colors hover:text-ink-900"
+            >
+              Privacy
+            </a>
+            <span aria-hidden>·</span>
+            <p>Designed &amp; built by Hamza.</p>
+          </div>
         </div>
       </div>
     </footer>

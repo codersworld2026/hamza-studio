@@ -2,13 +2,10 @@ import {
   Sparkles,
   Mic,
   ArrowRight,
-  Users,
   MessageCircle,
-  TrendingUp,
   UserCircle2,
 } from "lucide-react";
 import LaptopMockup from "./LaptopMockup.jsx";
-import StatCard from "./StatCard.jsx";
 import { WHATSAPP_URL } from "../config/contact.js";
 
 export default function Hero() {
@@ -166,55 +163,6 @@ export default function Hero() {
               />
 
               <LaptopMockup />
-
-              {/* Floating cards (desktop only) — 3 cards, no clipping */}
-              <div className="pointer-events-none absolute inset-0 hidden lg:block">
-                {/* Leads — top-left, kept inside frame */}
-                <div className="animate-float-slow absolute left-[-2%] top-[6%]">
-                  <StatCard
-                    Icon={Users}
-                    iconBg="bg-brand-50"
-                    iconColor="text-brand-500"
-                    label="Leads"
-                    value="128"
-                    delta="24%"
-                    size="sm"
-                  />
-                </div>
-
-                {/* Enquiries — top-right, kept inside frame */}
-                <div className="animate-float-med absolute right-[-2%] top-[14%]">
-                  <StatCard
-                    Icon={MessageCircle}
-                    iconBg="bg-emerald-50"
-                    iconColor="text-emerald-600"
-                    label="Enquiries"
-                    value="56"
-                    delta="30%"
-                    size="sm"
-                  />
-                </div>
-
-                {/* Website Traffic — bottom center, just below laptop */}
-                <div className="animate-float-fast absolute -bottom-6 left-1/2 -translate-x-1/2">
-                  <StatCard
-                    Icon={TrendingUp}
-                    iconBg="bg-peach-100"
-                    iconColor="text-peach-400"
-                    label="Website Traffic"
-                    value="2.4K"
-                    delta="28%"
-                    size="sm"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile/tablet stat cards */}
-            <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-3 lg:hidden">
-              <StatCard Icon={Users} iconBg="bg-brand-50" iconColor="text-brand-500" label="Leads" value="128" delta="24%" size="sm" className="!w-full" />
-              <StatCard Icon={MessageCircle} iconBg="bg-emerald-50" iconColor="text-emerald-600" label="Enquiries" value="56" delta="30%" size="sm" className="!w-full" />
-              <StatCard Icon={TrendingUp} iconBg="bg-peach-100" iconColor="text-peach-400" label="Website Traffic" value="2.4K" delta="28%" size="sm" className="!w-full" />
             </div>
           </div>
         </div>

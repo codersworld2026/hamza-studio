@@ -191,7 +191,14 @@ export default function Contact() {
 
           <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-[12px] text-ink-400">
             <Check className="h-3.5 w-3.5 text-emerald-500" strokeWidth={2.6} />
-            Your details will only be used to reply to your enquiry.
+            Your details will only be used to reply to your enquiry. See{" "}
+            <a
+              href="#privacy"
+              className="font-semibold text-brand-600 underline-offset-2 hover:underline"
+            >
+              Privacy Policy
+            </a>
+            .
           </p>
         </form>
       </div>
