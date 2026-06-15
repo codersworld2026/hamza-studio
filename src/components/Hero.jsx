@@ -1,171 +1,131 @@
-import {
-  Sparkles,
-  Mic,
-  ArrowRight,
-  MessageCircle,
-  UserCircle2,
-} from "lucide-react";
-import LaptopMockup from "./LaptopMockup.jsx";
-import { WHATSAPP_URL } from "../config/contact.js";
+import { useVoiceModal } from "../context/VoiceModalContext.jsx";
+import { RainbowWave, SmileySun, StampBadge, TreatSticker } from "./Motifs.jsx";
 
 export default function Hero() {
+  const { open } = useVoiceModal();
+
   return (
-    <section className="relative isolate overflow-hidden">
-      {/* === BACKGROUND DECOR === */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        {/* radial gradient */}
-        <div
-          className="absolute inset-0 opacity-70"
-          style={{
-            background:
-              "radial-gradient(1100px 600px at 78% 18%, #e3edff 0%, rgba(247,248,251,0) 60%), radial-gradient(700px 500px at 8% 70%, #ffe4d0 0%, rgba(247,248,251,0) 60%)",
-          }}
-        />
-        {/* faint dotted grid */}
-        <svg
-          className="absolute inset-0 h-full w-full opacity-[0.14]"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern id="dotgrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-              <circle cx="1.4" cy="1.4" r="1.4" fill="#1a2a5e" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#dotgrid)" />
-        </svg>
-
-        {/* Pale blue blob (top right) */}
-        <div className="absolute -right-32 -top-40 h-[520px] w-[520px] rounded-full bg-skysoft-200/70 blur-3xl" />
-        {/* Soft peach blob (left) */}
-        <div className="absolute -left-32 top-40 h-[400px] w-[400px] rounded-full bg-peach-100/60 blur-3xl" />
-
-        {/* Orange swoosh (top left) */}
-        <svg className="absolute left-[6%] top-[14%] h-16 w-44 text-peach-400/70" viewBox="0 0 200 60" fill="none">
-          <path d="M5 35 Q 60 5 120 30 T 195 25" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-        </svg>
-
-        {/* Star (right side) */}
-        <svg className="absolute right-[5%] top-[42%] h-10 w-10 text-ink-900/70" viewBox="0 0 40 40" fill="none">
-          <path d="M20 4l3.6 11.2H35l-9.2 6.8 3.6 11.2L20 26.4l-9.4 6.8 3.6-11.2L5 15.2h11.4L20 4z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-        </svg>
-
-        {/* Squiggle (bottom right) */}
-        <svg className="absolute right-[6%] bottom-[16%] h-9 w-28 text-peach-400/80" viewBox="0 0 120 40" fill="none">
-          <path d="M2 20 Q 20 2 40 20 T 80 20 T 118 20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        </svg>
-
-        {/* Small dot cluster */}
-        <svg className="absolute right-16 top-32 h-16 w-16 text-brand-300/60" viewBox="0 0 64 64" fill="currentColor">
-          {Array.from({ length: 4 }).map((_, r) =>
-            Array.from({ length: 4 }).map((_, c) => (
-              <circle key={`a-${r}-${c}`} cx={6 + c * 16} cy={6 + r * 16} r="1.6" />
-            ))
-          )}
-        </svg>
-
-        {/* Tiny accent dots */}
-        <span className="absolute right-[20%] top-[10%] h-2 w-2 rounded-full bg-brand-400/70" />
-        <span className="absolute left-[10%] top-[58%] h-1.5 w-1.5 rounded-full bg-brand-300" />
-      </div>
-
-      {/* === HERO CONTENT === */}
-      <div className="mx-auto flex min-h-[calc(100vh-72px)] max-w-7xl flex-col justify-center px-5 pb-12 pt-12 sm:px-8 lg:px-10 lg:pb-16 lg:pt-14">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[42fr_58fr] lg:gap-14">
-          {/* LEFT — copy */}
-          <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/15 bg-white/70 px-4 py-1.5 text-[13px] font-medium text-brand-700 shadow-[0_4px_14px_-6px_rgba(37,99,235,0.25)] backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5" strokeWidth={2.4} />
+    <section className="hero">
+      <div className="hero__bg" />
+      <div className="hero__dots" />
+      <div className="wrap">
+        <div className="hero__grid">
+          {/* LEFT */}
+          <div className="hero__copy">
+            <span className="hero__pill reveal">
+              <svg className="dot-spin" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m12 3 2.2 5.2L20 10l-5.2 2.2L12 18l-2.2-5.8L4 10l5.8-1.8Z" />
+              </svg>
               Modern websites. Real results.
-            </div>
+            </span>
 
-            <h1 className="mt-6 font-display text-[34px] font-semibold leading-[1.05] tracking-[-0.02em] text-ink-900 sm:text-[42px] lg:text-[46px]">
-              Websites That
-              <br />
-              Help Small
-              <br />
+            <h1 className="reveal" data-d="1">
+              Websites That<br />
+              Help Small<br />
               Businesses{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-brand-500">Grow</span>
-                <svg
-                  aria-hidden
-                  className="absolute -bottom-2 left-0 h-3 w-full"
-                  viewBox="0 0 200 14"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M3 9 Q 50 1 100 7 T 197 5"
-                    stroke="#ff9a5a"
-                    strokeWidth="3.2"
-                    strokeLinecap="round"
-                    fill="none"
-                  />
+              <span className="grow">
+                Grow
+                <svg viewBox="0 0 220 40" preserveAspectRatio="none" fill="none">
+                  <path d="M4 26C50 12 110 10 160 18c30 5 48 12 54 16" stroke="#FFC445" strokeWidth="9" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
 
-            {/* Slogan — main brand promise */}
-            <div className="mt-7 flex items-start gap-4">
-              <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-500 text-white shadow-[0_14px_28px_-10px_rgba(37,99,235,0.7)] ring-2 ring-white">
-                <Mic className="h-5 w-5" strokeWidth={2.5} />
+            <div className="hero__voice reveal" data-d="1">
+              <span className="mic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="9" y="3" width="6" height="11" rx="3" />
+                  <path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8" />
+                </svg>
               </span>
-              <p className="font-display text-[22px] font-bold leading-[1.2] tracking-tight text-ink-900 sm:text-[26px] lg:text-[28px]">
-                Just send me a voice note and{" "}
-                <span className="text-brand-500">consider it done.</span>
+              <p>
+                Just send me a voice note and <span className="done">consider it done.</span>
               </p>
             </div>
 
-            <p className="mt-5 text-[14.5px] leading-relaxed text-ink-500">
-              I build clean, modern websites for small businesses, freelancers
-              and startups — designed to help you look professional and win
-              more business.
+            <p className="hero__lede reveal" data-d="2">
+              I build clean, modern websites for small businesses, freelancers and startups —
+              designed to help you look professional and win more business.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#contact-form"
-                className="group inline-flex items-center gap-3 rounded-full bg-brand-500 px-10 py-5 text-[20px] font-extrabold text-white shadow-[0_22px_44px_-14px_rgba(37,99,235,0.75)] ring-1 ring-brand-500/20 transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-[0_28px_50px_-14px_rgba(37,99,235,0.8)]"
-              >
+            <div className="hero__ctas reveal" data-d="2">
+              <a className="btn btn--primary" href="#contact">
                 Start Your Website
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" strokeWidth={2.8} />
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3.5 rounded-full border-2 border-emerald-500/45 bg-white px-9 py-[18px] text-[20px] font-extrabold text-emerald-700 shadow-[0_18px_36px_-14px_rgba(16,185,129,0.55)] transition-all hover:-translate-y-0.5 hover:border-emerald-500 hover:bg-emerald-50/50 hover:text-emerald-800"
-              >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500 text-white shadow-[0_10px_22px_-6px_rgba(16,185,129,0.7)] ring-2 ring-white">
-                  <MessageCircle className="h-6 w-6" strokeWidth={2.6} />
+                <span className="arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
-                Send a Voice Note
               </a>
+              <button className="btn btn--cream" onClick={open}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F5D5A" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z" />
+                  <path d="M9 10.5v2M12 9v5M15 10.5v2" />
+                </svg>
+                Send a Voice Note
+              </button>
             </div>
 
-            {/* Personal brand line — promoted */}
-            <div className="mt-7 inline-flex items-center gap-2.5 text-[16px] font-bold text-ink-700">
-              <UserCircle2 className="h-5 w-5 text-brand-500" strokeWidth={2.4} />
-              Work directly with Hamza from first message to launch.
+            <div className="hero__trust reveal" data-d="3">
+              <div className="avas">
+                <span className="ava" style={{ background: "#FF6B35" }}>A</span>
+                <span className="ava" style={{ background: "#0F5D5A" }}>M</span>
+                <span className="ava" style={{ background: "#FFC445", color: "#17233D" }}>S</span>
+                <span className="ava" style={{ background: "#A7C4A1", color: "#17233D" }}>J</span>
+              </div>
+              <span>Work directly with Hamza — first message to launch.</span>
             </div>
           </div>
 
-          {/* RIGHT — visual */}
-          <div className="relative">
-            <div className="relative mx-auto w-full max-w-[640px] px-6 sm:px-10 lg:px-14">
-              {/* Soft pedestal blob behind */}
-              <div
-                aria-hidden
-                className="absolute inset-x-6 inset-y-4 -z-10 rounded-[42%] bg-gradient-to-br from-skysoft-200/80 to-skysoft-100/60 blur-2xl"
-              />
-              {/* Dashed ring decoration */}
-              <div
-                aria-hidden
-                className="absolute -right-2 -top-2 -z-10 h-28 w-28 rounded-full border-2 border-dashed border-brand-300/50"
-              />
+          {/* RIGHT — retro browser mockup */}
+          <div className="hero__visual reveal" data-d="2">
+            <svg className="sparkle" style={{ top: "-12px", right: "18%", width: "34px" }} viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 0 2.6 8.4L24 12l-9.4 3.6L12 24l-2.6-8.4L0 12l9.4-3.6Z" />
+            </svg>
+            <svg className="sparkle" style={{ bottom: "8%", left: "-10px", width: "26px", animationDelay: "1s" }} viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 0 2.6 8.4L24 12l-9.4 3.6L12 24l-2.6-8.4L0 12l9.4-3.6Z" />
+            </svg>
 
-              <LaptopMockup />
+            <div className="browser">
+              <div className="browser__bar">
+                <div className="dotrow">
+                  <i style={{ background: "#FF6B35" }} />
+                  <i style={{ background: "#FFC445" }} />
+                  <i style={{ background: "#A7C4A1" }} />
+                </div>
+                <div className="browser__url">hamza.studio</div>
+              </div>
+              <div className="browser__screen">
+                <div className="mini">
+                  <span className="mini__eyebrow">Good coffee, good vibes</span>
+                  <h3>
+                    Start Your <em>Sunny</em> Morning
+                  </h3>
+                  <div className="mini__btns">
+                    <span className="p p1" />
+                    <span className="p p2" />
+                  </div>
+                  <div className="mini__sun-wrap">
+                    <SmileySun face="#FF6B35" ray="#FFC445" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* floating stickers */}
+            <div className="float-badge float-badge--stamp" style={{ "--rot": "-8deg" }}>
+              <StampBadge id="hero" />
+            </div>
+            <div className="float-badge float-badge--treat" style={{ "--rot": "7deg" }}>
+              <TreatSticker />
             </div>
           </div>
         </div>
+      </div>
+
+      {/* rainbow wave divider */}
+      <div className="hero__wave">
+        <RainbowWave h={132} />
       </div>
     </section>
   );
