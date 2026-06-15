@@ -8,6 +8,7 @@ import HowItWorks from "./components/HowItWorks.jsx";
 import Services from "./components/Services.jsx";
 import Love from "./components/Love.jsx";
 import CTA from "./components/CTA.jsx";
+import ContactForm from "./components/ContactForm.jsx";
 import Footer from "./components/Footer.jsx";
 import Privacy from "./components/Privacy.jsx";
 import VoiceModal from "./components/VoiceModal.jsx";
@@ -86,6 +87,7 @@ export default function App() {
             <Services />
             <Love />
             <CTA />
+            <ContactForm />
           </>
         )}
       </main>

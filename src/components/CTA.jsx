@@ -1,12 +1,11 @@
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
-import { EMAIL_URL } from "../config/contact.js";
 import { RisingSun } from "./Motifs.jsx";
 
 export default function CTA() {
   const { open } = useVoiceModal();
 
   return (
-    <section className="cta" id="contact">
+    <section className="cta">
       <div className="cta__sun">
         <RisingSun />
       </div>
@@ -16,8 +15,8 @@ export default function CTA() {
           Start Your <em>Sunny</em> Website
         </h2>
         <p>
-          Tell me about your business in a quick voice note. I&rsquo;ll send back a plan, a price, and
-          a timeline — usually same day.
+          Tell me about your business — drop me a voice note or fill in the form below. I&rsquo;ll
+          send back a plan, a price, and a timeline, usually same day.
         </p>
         <div className="cta__ctas">
           <button className="btn btn--cream" onClick={open}>
@@ -27,12 +26,11 @@ export default function CTA() {
             </svg>
             Send a Voice Note
           </button>
-          <a className="btn btn--teal" href={EMAIL_URL}>
+          <a className="btn btn--teal" href="#contact">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF6E9" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="5" width="18" height="14" rx="2.5" />
-              <path d="m4 7 8 6 8-6" />
+              <path d="M4 7h16M4 12h16M4 17h10" />
             </svg>
-            Email me instead
+            Fill out the form
           </a>
         </div>
       </div>
