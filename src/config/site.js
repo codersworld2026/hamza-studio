@@ -11,7 +11,7 @@ export const SITE_URL = "https://hamza-studio.pages.dev";
 // The username page shows all your event types. To lock the embed to one event
 // (e.g. a 30-min strategy call), append its slug — copy the URL of that event
 // type from Cal.com, e.g. "https://cal.eu/hamza-suliman-75oolh/strategy-call".
-export const CAL_BOOKING_URL = "https://cal.eu/hamza-suliman-75oolh";
+export const CAL_BOOKING_URL = "https://www.cal.eu/hamza-suliman-75oolh";
 
 export const TAGLINE = "Websites & SEO that help SMEs grow";
 
