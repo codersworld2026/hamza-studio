@@ -4,7 +4,7 @@ export const EMAIL_URL = "mailto:Hamzaxsuliman@icloud.com";
 
 // Social profiles
 export const SOCIALS = {
-  x:         "https://x.com/Hamzastudio86",
+  tiktok:    "https://www.tiktok.com/@hamzastudio86",
   instagram: "https://instagram.com/hamzastudio86",
   github:    "https://github.com/codersworld2026",
 };

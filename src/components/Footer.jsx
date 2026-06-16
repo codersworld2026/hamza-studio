@@ -99,9 +99,9 @@ export default function Footer() {
                 <path d="M8.5 9.5c0 4 2 6 6 6" />
               </svg>
             </a>
-            <a href={SOCIALS.x} target="_blank" rel="noopener noreferrer" aria-label="X">
+            <a href={SOCIALS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L8 21H5l7.5-8.6L4.6 3H11l4.5 5.6Z" />
+                <path d="M16.5 3c.35 2.2 1.6 3.6 3.7 3.85v2.55c-1.25.12-2.45-.18-3.6-.82v5.95c0 3.4-2.7 6-6 6-2.95 0-5.45-2.1-5.9-4.95-.5-3.25 1.85-6.05 5-6.35v2.6c-1.5.27-2.6 1.6-2.45 3.15.13 1.45 1.4 2.55 2.85 2.5 1.6-.05 2.75-1.35 2.75-3V3h3.65Z" />
               </svg>
             </a>
             <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
