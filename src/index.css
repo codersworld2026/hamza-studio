@@ -661,7 +661,7 @@ body::before {
    ============================================================ */
 .booking { background: var(--cream); }
 .booking__card { background: #fff; border: 3px solid var(--navy); border-radius: var(--r-lg); box-shadow: var(--shadow-pop); padding: clamp(14px, 2vw, 22px); }
-.cal-embed { width: 100%; min-height: 560px; border-radius: var(--r-md); overflow: auto; }
+.cal-embed { display: block; width: 100%; min-height: 720px; border: 0; border-radius: var(--r-md); background: var(--cream); }
 .booking__fallback { margin-top: 14px; text-align: center; font-weight: 600; color: var(--ink-soft); font-size: .92rem; }
 .booking__fallback a { color: var(--teal); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 

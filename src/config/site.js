@@ -7,9 +7,11 @@ export const BRAND_SHORT = "Northlight";
 // TODO: change to your real domain once the Northlight Studios domain is live.
 export const SITE_URL = "https://hamza-studio.pages.dev";
 
-// Cal.com inline-embed link, e.g. "yourname/30min".
-// TODO: replace with your real Cal.com booking link.
-export const CAL_LINK = "northlight/strategy-call";
+// Your Cal.com booking page. NOTE: this account is on the EU region (cal.eu).
+// The username page shows all your event types. To lock the embed to one event
+// (e.g. a 30-min strategy call), append its slug — copy the URL of that event
+// type from Cal.com, e.g. "https://cal.eu/hamza-suliman-75oolh/strategy-call".
+export const CAL_BOOKING_URL = "https://cal.eu/hamza-suliman-75oolh";
 
 export const TAGLINE = "Websites & SEO that help SMEs grow";
 
