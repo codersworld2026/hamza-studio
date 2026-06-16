@@ -517,7 +517,8 @@ body::before {
 .vm-transcript:focus { outline: none; box-shadow: var(--shadow-sticker); }
 .vm-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .vm-actions .btn { flex: 1 1 140px; justify-content: center; }
-.vm-link { margin-top: 18px; font-weight: 800; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.vm-hint { margin: 14px 0 0; font-size: .82rem; color: var(--ink-soft); font-weight: 600; }
+.vm-link { margin-top: 14px; font-weight: 800; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 .vm-link:hover { color: var(--orange); }
 
 /* ============================================================

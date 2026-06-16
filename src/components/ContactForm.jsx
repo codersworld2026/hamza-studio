@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
 import { EMAIL_URL, WHATSAPP_URL } from "../config/contact.js";
 import { mailtoLink, whatsappLink, EMAIL_ADDRESS } from "../lib/send.js";
+import { consumePrefill, nonEmpty, PREFILL_EVENT } from "../lib/voice.js";
 
 const EMPTY = { name: "", email: "", phone: "", message: "" };
 
@@ -9,6 +10,22 @@ export default function ContactForm() {
   const { open } = useVoiceModal();
   const [form, setForm] = useState(EMPTY);
   const [sent, setSent] = useState(false);
+
+  // Receive a voice-note transcript (+ detected name/email/phone) from the modal:
+  // via sessionStorage when arriving from another page, or a live event same-page.
+  useEffect(() => {
+    const apply = (data) => {
+      const fields = nonEmpty(data);
+      if (Object.keys(fields).length === 0) return;
+      setForm((f) => ({ ...f, ...fields }));
+      setSent(false);
+    };
+    const stored = consumePrefill();
+    if (stored) apply(stored);
+    const onPrefill = (e) => apply(e.detail);
+    window.addEventListener(PREFILL_EVENT, onPrefill);
+    return () => window.removeEventListener(PREFILL_EVENT, onPrefill);
+  }, []);
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 

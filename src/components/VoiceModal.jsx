@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
 import { EMAIL_URL } from "../config/contact.js";
-import { BRAND } from "../config/site.js";
-import { mailtoLink, whatsappLink } from "../lib/send.js";
+import { whatsappLink } from "../lib/send.js";
+import { parseContact, PREFILL_KEY, PREFILL_EVENT } from "../lib/voice.js";
 
 const BAR_COUNT = 24;
 const FLAT = Array(BAR_COUNT).fill(8);
@@ -143,8 +143,29 @@ function Recorder({ onClose }) {
   }
 
   const trimmed = transcript.trim();
-  const emailHref = mailtoLink({ subject: `Voice note enquiry — ${BRAND}`, body: trimmed });
   const waHref = whatsappLink(trimmed);
+
+  // Drop the transcript (and any detected name/email/phone) into the contact form.
+  function sendToForm() {
+    const data = parseContact(trimmed);
+    const isHome =
+      window.location.pathname === "/" || window.location.pathname === "/index.html";
+    if (isHome) {
+      window.dispatchEvent(new CustomEvent(PREFILL_EVENT, { detail: data }));
+      onClose();
+      setTimeout(() => {
+        const el = document.getElementById("contact");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    } else {
+      try {
+        sessionStorage.setItem(PREFILL_KEY, JSON.stringify(data));
+      } catch {
+        /* storage unavailable — navigation still happens */
+      }
+      window.location.assign("/#contact");
+    }
+  }
 
   return (
     <div className="modal" role="dialog" aria-modal="true" aria-labelledby="vmTitle">
@@ -172,7 +193,7 @@ function Recorder({ onClose }) {
       ) : phase === "review" ? (
         <div className="rec-review">
           <h3 id="vmTitle">Here&rsquo;s what we heard</h3>
-          <p>Tidy it up if you like, then send it over.</p>
+          <p>Tidy it up if you like, then choose where it goes.</p>
           <textarea
             className="vm-transcript"
             value={transcript}
@@ -181,20 +202,12 @@ function Recorder({ onClose }) {
             rows={5}
           />
           <div className="vm-actions">
-            <a
-              className="btn btn--primary"
-              href={emailHref}
-              aria-disabled={!trimmed}
-              onClick={(e) => {
-                if (!trimmed) e.preventDefault();
-              }}
-            >
+            <button className="btn btn--primary" onClick={sendToForm} disabled={!trimmed}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="5" width="18" height="14" rx="2.5" />
-                <path d="m4 7 8 6 8-6" />
+                <path d="M12 5v14M5 12h14" />
               </svg>
-              Send as email
-            </a>
+              Add to the form
+            </button>
             <a
               className="btn btn--teal"
               href={trimmed ? waHref : undefined}
@@ -208,9 +221,10 @@ function Recorder({ onClose }) {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF6E9" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z" />
               </svg>
-              WhatsApp
+              Send on WhatsApp
             </a>
           </div>
+          <p className="vm-hint">We&rsquo;ll auto-fill your name, email and phone if you mention them.</p>
           <button className="vm-link" onClick={startRecording}>
             ↺ Record again
           </button>
