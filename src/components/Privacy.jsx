@@ -25,9 +25,10 @@ export default function Privacy() {
         </svg>
         <p>
           <strong>Template — please review.</strong> This privacy notice is a starting template that
-          reflects the way <em>this website</em> currently behaves (no analytics, no cookies, no
-          tracking, contact form sends an email). Before publishing, have it reviewed by a legal
-          professional and adjust to your jurisdiction and actual data-handling practices.
+          reflects the way <em>this website</em> currently behaves (no analytics or tracking; a
+          cookie banner controls the third-party booking embed; the contact form opens your email or
+          WhatsApp). Before publishing, have it reviewed by a legal professional and adjust to your
+          jurisdiction and actual data-handling practices.
         </p>
       </div>
 
@@ -61,7 +62,15 @@ export default function Privacy() {
         </ul>
         <p>
           This site does <strong>not</strong> use analytics, advertising cookies, fingerprinting, or
-          any third-party tracking. No cookies are set by this website.
+          any third-party tracking. The only thing we store on your device is your cookie-banner
+          choice (a small entry in your browser&rsquo;s local storage) — strictly necessary to
+          remember your preference.
+        </p>
+        <p>
+          Our booking page embeds <strong>Cal.com</strong>, a third-party scheduling tool that may
+          set its own cookies. It only loads if you accept cookies or choose to load the calendar; if
+          you decline, you can still reach us by email or WhatsApp. We also load fonts from Google
+          Fonts. Please see those providers&rsquo; own privacy policies for details.
         </p>
       </Section>
 

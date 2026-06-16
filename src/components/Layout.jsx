@@ -4,6 +4,7 @@ import Marquee from "./Marquee.jsx";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import VoiceModal from "./VoiceModal.jsx";
+import CookieConsent from "./CookieConsent.jsx";
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function Layout({ children }) {
       <main id="top">{children}</main>
       <Footer />
       <VoiceModal />
+      <CookieConsent />
     </VoiceModalProvider>
   );
 }
