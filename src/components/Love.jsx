@@ -7,13 +7,13 @@ export default function Love() {
           <div className="quote-card reveal">
             <div className="mark">“</div>
             <blockquote>
-              Every site I build has one job: make your small business look like the real deal — and
-              bring in more of the right customers.
+              Every site we build has one job: make your SME look like the real deal — and bring in
+              more of the right customers.
             </blockquote>
             <div className="who">
-              <span className="ava">H</span>
+              <span className="ava">N</span>
               <div>
-                <b>The Hamza Studio promise</b>
+                <b>The Northlight Studios promise</b>
                 <span>Good days, all ways</span>
               </div>
             </div>

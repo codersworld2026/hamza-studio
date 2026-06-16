@@ -561,8 +561,8 @@ body::before {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
-  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero__visual { order: -1; max-width: 480px; width: 100%; margin-inline: auto; }
+  .hero__grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero__visual { max-width: 520px; width: 100%; margin-inline: auto; }
   .steps { grid-template-columns: 1fr; gap: 40px; }
   .svc-grid { grid-template-columns: 1fr; }
   .love__grid { grid-template-columns: 1fr; }
@@ -600,3 +600,173 @@ body::before {
   .promises__row { gap: 16px 28px; }
   .promise { font-size: 1.1rem; }
 }
+
+/* ============================================================
+   NORTHLIGHT — hero "What we do" card
+   ============================================================ */
+.whatwedo { background: var(--cream); border: 3px solid var(--navy); border-radius: var(--r-lg); box-shadow: var(--shadow-pop); padding: 26px 24px; }
+.whatwedo__eyebrow { display: block; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--teal); margin-bottom: 14px; }
+.whatwedo__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.whatwedo__list a { display: flex; align-items: center; gap: 14px; padding: 13px 16px; border: 2.5px solid var(--navy); border-radius: var(--r-md); background: #fff; font-weight: 800; color: var(--navy); box-shadow: 2px 3px 0 var(--navy); transition: transform .15s, box-shadow .15s, background .15s; }
+.whatwedo__list a:hover { transform: translate(-2px, -2px); box-shadow: 4px 5px 0 var(--navy); background: var(--peach); }
+.whatwedo__ic { width: 40px; height: 40px; border-radius: 12px; border: 2.5px solid var(--navy); display: grid; place-items: center; flex-shrink: 0; background: var(--mustard); }
+.whatwedo__ic svg { width: 22px; height: 22px; color: var(--navy); }
+.whatwedo__list li:nth-child(1) .whatwedo__ic { background: var(--orange); }
+.whatwedo__list li:nth-child(1) .whatwedo__ic svg { color: #fff; }
+.whatwedo__list li:nth-child(3) .whatwedo__ic { background: var(--sage); }
+.whatwedo__list li:nth-child(4) .whatwedo__ic { background: var(--peach); }
+.whatwedo__label { flex: 1; }
+.whatwedo__arrow { color: var(--orange); display: grid; place-items: center; }
+.whatwedo__all { display: inline-block; margin-top: 16px; font-weight: 900; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.whatwedo__all:hover { color: var(--orange); }
+
+/* Services cards as links */
+.svc { color: inherit; text-decoration: none; }
+.svc__more { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-weight: 900; color: var(--teal); font-size: .95rem; }
+.svc:hover .svc__more { color: var(--orange); }
+.svc__more svg { transition: transform .2s; }
+.svc:hover .svc__more svg { transform: translateX(3px); }
+.svc:nth-child(5) .svc__chip { background: var(--teal); }
+.svc:nth-child(5) .svc__chip svg { color: var(--cream); }
+.svc:nth-child(6) .svc__chip { background: var(--blush); }
+
+/* ============================================================
+   SHOWCASE ("Good morning" visual moved lower)
+   ============================================================ */
+.showcase { background: var(--cream); }
+.showcase__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+.showcase__copy h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); margin-top: 14px; }
+.showcase__copy h2 em { color: var(--orange); font-style: normal; }
+.showcase__copy p { margin: 18px 0 28px; color: var(--ink-soft); font-weight: 500; font-size: 1.12rem; max-width: 440px; }
+.showcase__visual { max-width: 460px; }
+
+/* ============================================================
+   AREAS WE SERVE
+   ============================================================ */
+.areas { background: var(--blush); }
+.areas__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.area { background: var(--cream); border: 3px solid var(--navy); border-radius: var(--r-lg); padding: 30px 28px; box-shadow: var(--shadow-sticker); transition: transform .2s; }
+.area:hover { transform: translateY(-4px); }
+.area__ic { width: 60px; height: 60px; border-radius: 16px; border: 3px solid var(--navy); display: grid; place-items: center; background: var(--mustard); box-shadow: var(--shadow-sticker); margin-bottom: 18px; }
+.area__ic svg { width: 30px; height: 30px; color: var(--navy); }
+.area:nth-child(1) .area__ic { background: var(--orange); }
+.area:nth-child(1) .area__ic svg { color: #fff; }
+.area:nth-child(2) .area__ic { background: var(--sage); }
+.area:nth-child(3) .area__ic { background: var(--peach); }
+.area h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.area p { color: var(--ink-soft); font-weight: 500; }
+
+/* ============================================================
+   BOOKING (Cal.com embed)
+   ============================================================ */
+.booking { background: var(--cream); }
+.booking__card { background: #fff; border: 3px solid var(--navy); border-radius: var(--r-lg); box-shadow: var(--shadow-pop); padding: clamp(14px, 2vw, 22px); }
+.cal-embed { width: 100%; min-height: 560px; border-radius: var(--r-md); overflow: auto; }
+.booking__fallback { margin-top: 14px; text-align: center; font-weight: 600; color: var(--ink-soft); font-size: .92rem; }
+.booking__fallback a { color: var(--teal); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============================================================
+   SUB-PAGE HERO + BREADCRUMB
+   ============================================================ */
+.page-hero { position: relative; overflow: hidden; padding: clamp(48px, 7vw, 92px) 0 clamp(40px, 5vw, 60px); }
+.page-hero .wrap { max-width: 880px; }
+.page-hero__ic { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 18px; border: 3px solid var(--navy); background: var(--mustard); box-shadow: var(--shadow-sticker); margin-bottom: 20px; }
+.page-hero__ic svg { width: 32px; height: 32px; color: var(--navy); }
+.page-hero h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); margin-bottom: 18px; }
+.lede { font-size: 1.22rem; color: var(--ink-soft); font-weight: 500; max-width: 640px; }
+.page-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+
+.crumbs { margin-bottom: 22px; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; font-weight: 700; font-size: .9rem; }
+.crumbs a { color: var(--teal); }
+.crumbs a:hover { color: var(--orange); text-decoration: underline; }
+.crumbs [aria-current="page"] { color: var(--ink-soft); }
+.crumbs__sep { color: var(--line); }
+
+/* ============================================================
+   SERVICE PAGE BODY
+   ============================================================ */
+.svc-body { background: var(--cream); }
+.svc-body__grid { display: grid; grid-template-columns: 1fr 340px; gap: clamp(32px, 5vw, 56px); align-items: start; }
+.svc-body__main > h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 38px 0 16px; }
+.svc-body__main > h2:first-of-type { margin-top: 8px; }
+.svc-body__p { color: var(--ink-soft); font-weight: 500; font-size: 1.1rem; margin-bottom: 16px; }
+.ticklist { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 12px; }
+.ticklist li { display: flex; align-items: flex-start; gap: 12px; font-weight: 600; color: var(--navy); }
+.ticklist li svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--teal); margin-top: 2px; }
+.processlist { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.processlist li { display: flex; gap: 16px; align-items: flex-start; }
+.processlist__num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--mustard); border: 2.5px solid var(--navy); display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; box-shadow: var(--shadow-sticker); }
+.processlist li b { display: block; font-size: 1.1rem; }
+.processlist li p { color: var(--ink-soft); font-weight: 500; margin-top: 2px; }
+.faqs { display: grid; gap: 12px; }
+.faq { border: 2.5px solid var(--navy); border-radius: var(--r-md); background: #fff; padding: 2px 18px; box-shadow: 2px 3px 0 var(--navy); }
+.faq summary { cursor: pointer; font-weight: 800; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--font-display); font-size: 1.5rem; color: var(--orange); line-height: 1; }
+.faq[open] summary::after { content: "–"; }
+.faq p { color: var(--ink-soft); font-weight: 500; padding: 0 0 16px; }
+.svc-aside { display: grid; gap: 18px; position: sticky; top: 90px; }
+.aside-card { background: var(--cream); border: 3px solid var(--navy); border-radius: var(--r-lg); padding: 26px 24px; box-shadow: var(--shadow-sticker); }
+.aside-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.aside-card p { color: var(--ink-soft); font-weight: 500; margin-bottom: 16px; }
+.aside-card .btn { width: 100%; justify-content: center; margin-bottom: 10px; }
+.aside-card .btn:last-child { margin-bottom: 0; }
+.aside-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.aside-links a { display: flex; align-items: center; gap: 12px; font-weight: 800; color: var(--navy); padding: 10px 12px; border-radius: var(--r-sm); transition: background .15s; }
+.aside-links a svg { width: 22px; height: 22px; color: var(--teal); }
+.aside-links a:hover { background: var(--peach); }
+
+/* ============================================================
+   BOOK PAGE
+   ============================================================ */
+.book-body { background: var(--cream); }
+.book-body__grid { display: grid; grid-template-columns: 300px 1fr; gap: clamp(28px, 4vw, 48px); align-items: start; }
+.book-expect { position: sticky; top: 90px; }
+.book-expect h2 { font-size: 1.6rem; margin-bottom: 16px; }
+
+/* ============================================================
+   WORK / PORTFOLIO PAGE
+   ============================================================ */
+.work-body { background: var(--cream); }
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+.work-card { background: #fff; border: 3px solid var(--navy); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-sticker); }
+.work-shot { aspect-ratio: 16 / 10; background: repeating-linear-gradient(45deg, var(--blush), var(--blush) 14px, var(--cream) 14px, var(--cream) 28px); border-bottom: 3px solid var(--navy); display: grid; place-items: center; }
+.work-shot span { font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); background: var(--cream); border: 2px dashed var(--line); padding: 8px 16px; border-radius: var(--r-pill); }
+.work-card__body { padding: 22px 22px 26px; }
+.work-card__tag { font-weight: 900; letter-spacing: .1em; text-transform: uppercase; font-size: .72rem; color: var(--teal); }
+.work-card h3 { font-size: 1.3rem; margin: 8px 0; }
+.work-card__body p { color: var(--ink-soft); font-weight: 500; }
+.work-quotes { margin-top: clamp(56px, 8vw, 90px); }
+.work-quotes__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 32px; }
+.work-quote { background: var(--cream); border: 3px solid var(--navy); border-radius: var(--r-lg); padding: 28px 26px; box-shadow: var(--shadow-sticker); }
+.work-quote .mark { font-family: var(--font-display); font-size: 3rem; line-height: .4; color: var(--orange); }
+.work-quote > p { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--navy); margin: 8px 0 18px; }
+.work-quote footer { display: flex; align-items: center; gap: 12px; color: var(--ink-soft); font-weight: 700; font-size: .92rem; }
+.work-quote__ava { width: 40px; height: 40px; border-radius: 50%; border: 2.5px solid var(--navy); background: var(--mustard); display: grid; place-items: center; font-weight: 900; color: var(--navy); }
+.work-cta { text-align: center; margin-top: clamp(56px, 8vw, 90px); background: var(--navy); color: var(--cream); border-radius: var(--r-xl); padding: clamp(40px, 6vw, 64px); }
+.work-cta h2 { color: var(--cream); font-size: clamp(2rem, 4vw, 3rem); }
+.work-cta p { margin: 14px 0 26px; color: color-mix(in srgb, var(--cream) 80%, transparent); font-weight: 500; font-size: 1.1rem; }
+.work-cta__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   RESPONSIVE — new sections
+   ============================================================ */
+@media (max-width: 980px) {
+  .showcase__grid { grid-template-columns: 1fr; gap: 40px; }
+  .showcase__visual { margin-inline: auto; }
+  .areas__grid { grid-template-columns: 1fr; }
+  .svc-body__grid { grid-template-columns: 1fr; }
+  .svc-aside { position: static; }
+  .book-body__grid { grid-template-columns: 1fr; }
+  .book-expect { position: static; }
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-quotes__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .page-hero__ctas .btn { width: 100%; justify-content: center; }
+  .whatwedo { padding: 22px 18px; }
+  .aside-card .btn { width: 100%; }
+}
+

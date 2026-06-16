@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
+import { BRAND } from "../config/site.js";
 
 const LINKS = [
   {
-    href: "#services",
+    href: "/#services",
     label: "Services",
     icon: (
       <>
@@ -15,17 +16,27 @@ const LINKS = [
     ),
   },
   {
-    href: "#how",
-    label: "How it works",
+    href: "/work",
+    label: "Work",
     icon: (
       <>
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" />
+        <rect x="3" y="4" width="18" height="14" rx="2.5" />
+        <path d="M3 9h18M9 22h6" />
       </>
     ),
   },
   {
-    href: "#contact",
+    href: "/book",
+    label: "Book a call",
+    icon: (
+      <>
+        <rect x="3" y="4" width="18" height="17" rx="2.5" />
+        <path d="M8 2v4M16 2v4M3 10h18M9 15l2 2 3-4" />
+      </>
+    ),
+  },
+  {
+    href: "/#contact",
     label: "Contact",
     icon: (
       <>
@@ -54,13 +65,14 @@ export default function Header() {
     <header className={`nav${stuck ? " is-stuck" : ""}${menuOpen ? " menu-open" : ""}`} id="nav">
       <div className="wrap">
         <div className="nav__inner">
-          <a className="brand" href="#top" aria-label="Hamza Studio home" onClick={closeMenu}>
-            <span className="brand__badge">H</span>
+          <a className="brand" href="/" aria-label={`${BRAND} home`} onClick={closeMenu}>
+            <span className="brand__badge">N</span>
             <span>
               <span className="brand__name">
-                Hamza Studio<span className="dot">.</span>
+                {BRAND}
+                <span className="dot">.</span>
               </span>
-              <span className="brand__tag">“Just send me a voice note and consider it done.”</span>
+              <span className="brand__tag">Websites &amp; SEO that help SMEs grow</span>
             </span>
           </a>
 
@@ -81,13 +93,14 @@ export default function Header() {
                 <rect x="9" y="3" width="6" height="11" rx="3" />
                 <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
               </svg>
-              Send Voice Note
+              Voice Note
             </button>
-            <a className="btn btn--primary btn--sm btn--talk" href="#contact">
+            <a className="btn btn--primary btn--sm btn--talk" href="/book">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z" />
+                <rect x="3" y="4" width="18" height="17" rx="2.5" />
+                <path d="M8 2v4M16 2v4M3 10h18" />
               </svg>
-              Let&rsquo;s Talk
+              Book a call
             </a>
             <button
               className="nav__toggle"
@@ -132,8 +145,8 @@ export default function Header() {
               </svg>
               Send a Voice Note
             </button>
-            <a className="btn btn--primary" href="#contact" onClick={closeMenu}>
-              Let&rsquo;s Talk
+            <a className="btn btn--primary" href="/book" onClick={closeMenu}>
+              Book a strategy call
             </a>
           </div>
         </div>

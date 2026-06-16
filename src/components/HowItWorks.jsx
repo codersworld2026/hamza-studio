@@ -8,7 +8,7 @@ export default function HowItWorks() {
             Three steps to a site that <em>shines</em>
           </h2>
           <p>
-            No briefs, no jargon, no endless calls. Tell me what you need in your own words — I&rsquo;ll
+            No briefs, no jargon, no endless calls. Tell us what you need in your own words — we&rsquo;ll
             handle the rest.
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function HowItWorks() {
             </svg>
             <h3>Send a voice note</h3>
             <p>
-              Ramble about your business, your vibe, what you sell. 60 seconds is plenty — I&rsquo;ll
+              Ramble about your business, your vibe, what you sell. 60 seconds is plenty — we&rsquo;ll
               pull out the good stuff.
             </p>
           </article>
@@ -32,7 +32,7 @@ export default function HowItWorks() {
               <rect x="8" y="14" width="48" height="32" rx="5" fill="#A7C4A1" />
               <path d="M8 24h48M16 19h.01M22 19h.01M28 50h8" />
             </svg>
-            <h3>I design &amp; build</h3>
+            <h3>We design &amp; build</h3>
             <p>
               You get a clean, modern, mobile-ready site that looks like you spent thousands — with
               copy that sounds like you.

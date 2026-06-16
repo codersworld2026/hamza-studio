@@ -36,7 +36,7 @@ export default function ContactForm() {
 
   function sendWhatsApp() {
     if (!ready) return;
-    const text = `Hi Hamza! I'm ${form.name.trim()}.\n\n${form.message.trim()}\n\n(Email: ${form.email.trim()}${
+    const text = `Hi Northlight Studios, I'm ${form.name.trim()}.\n\n${form.message.trim()}\n\n(Email: ${form.email.trim()}${
       form.phone.trim() ? `, Phone: ${form.phone.trim()}` : ""
     })`;
     window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
@@ -52,11 +52,11 @@ export default function ContactForm() {
           <div className="contact__intro reveal">
             <span className="eyebrow">Get in touch</span>
             <h2>
-              Tell me about your <em>project</em>
+              Tell us about your <em>project</em>
             </h2>
             <p>
-              Fill in the form and I&rsquo;ll reply with a plan, a price and a timeline — usually the
-              same day. Prefer to talk? Send a voice note or message me directly.
+              Fill in the form and we&rsquo;ll reply with a plan, a price and a timeline — usually the
+              same day. Prefer to talk? Send a voice note or message us directly.
             </p>
 
             <button type="button" className="btn btn--primary contact__voice" onClick={open}>
@@ -87,7 +87,7 @@ export default function ContactForm() {
                       <path d="M8.5 9.5c0 4 2 6 6 6" />
                     </svg>
                   </span>
-                  Message me on WhatsApp
+                  Message us on WhatsApp
                 </a>
               </li>
             </ul>
@@ -105,7 +105,7 @@ export default function ContactForm() {
                 <h3>Almost there! 🎉</h3>
                 <p>
                   Your message should have opened in your email or WhatsApp app — just hit send. If
-                  nothing popped up, email me at <a href={EMAIL_URL}>{EMAIL_ADDRESS}</a>.
+                  nothing popped up, email us at <a href={EMAIL_URL}>{EMAIL_ADDRESS}</a>.
                 </p>
                 <button
                   type="button"

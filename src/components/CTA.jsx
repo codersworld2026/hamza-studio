@@ -15,7 +15,7 @@ export default function CTA() {
           Start Your <em>Sunny</em> Website
         </h2>
         <p>
-          Tell me about your business — drop me a voice note or fill in the form below. I&rsquo;ll
+          Tell us about your business — drop us a voice note or fill in the form below. We&rsquo;ll
           send back a plan, a price, and a timeline, usually same day.
         </p>
         <div className="cta__ctas">

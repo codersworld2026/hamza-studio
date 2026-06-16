@@ -1,7 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
+// Multi-page build: every route ships as a real static HTML file with its own
+// SEO <head>, all sharing one React bundle (routed by pathname in main.jsx).
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        work: 'work.html',
+        book: 'book.html',
+        privacy: 'privacy.html',
+        'website-design': 'services/website-design.html',
+        'website-redesign': 'services/website-redesign.html',
+        seo: 'services/seo.html',
+        'local-seo': 'services/local-seo.html',
+        'landing-pages': 'services/landing-pages.html',
+        'website-maintenance': 'services/website-maintenance.html',
+      },
+    },
+  },
 })

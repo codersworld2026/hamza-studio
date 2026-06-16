@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
 import { EMAIL_URL } from "../config/contact.js";
+import { BRAND } from "../config/site.js";
 import { mailtoLink, whatsappLink } from "../lib/send.js";
 
 const BAR_COUNT = 24;
@@ -142,7 +143,7 @@ function Recorder({ onClose }) {
   }
 
   const trimmed = transcript.trim();
-  const emailHref = mailtoLink({ subject: "Voice note enquiry — Hamza Studio", body: trimmed });
+  const emailHref = mailtoLink({ subject: `Voice note enquiry — ${BRAND}`, body: trimmed });
   const waHref = whatsappLink(trimmed);
 
   return (
@@ -154,10 +155,10 @@ function Recorder({ onClose }) {
       {/* Browser can't do in-page speech-to-text */}
       {error === "unsupported" ? (
         <div className="rec-fallback">
-          <h3 id="vmTitle">Send me a voice note</h3>
+          <h3 id="vmTitle">Send us a voice note</h3>
           <p>
             This browser can&rsquo;t transcribe speech in-page. No worries — type your message in the
-            form, or send me an email and I&rsquo;ll take it from there.
+            form, or send us an email and we&rsquo;ll take it from there.
           </p>
           <div className="vm-actions">
             <button className="btn btn--primary" onClick={() => goToForm(onClose)}>
@@ -170,7 +171,7 @@ function Recorder({ onClose }) {
         </div>
       ) : phase === "review" ? (
         <div className="rec-review">
-          <h3 id="vmTitle">Here&rsquo;s what I heard</h3>
+          <h3 id="vmTitle">Here&rsquo;s what we heard</h3>
           <p>Tidy it up if you like, then send it over.</p>
           <textarea
             className="vm-transcript"
@@ -216,8 +217,8 @@ function Recorder({ onClose }) {
         </div>
       ) : (
         <div className="rec-live">
-          <h3 id="vmTitle">Send me a voice note</h3>
-          <p>Tap the mic and tell me about your business — I&rsquo;ll turn it into text.</p>
+          <h3 id="vmTitle">Send us a voice note</h3>
+          <p>Tap the mic and tell us about your business — we&rsquo;ll turn it into text.</p>
 
           {error === "mic" && (
             <p className="vm-error">

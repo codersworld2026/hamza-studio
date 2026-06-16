@@ -1,5 +1,7 @@
 import { useVoiceModal } from "../context/VoiceModalContext.jsx";
 import { SOCIALS, WHATSAPP_URL, EMAIL_URL } from "../config/contact.js";
+import { BRAND } from "../config/site.js";
+import { SERVICES } from "../config/services.js";
 import { StampBadge } from "./Motifs.jsx";
 
 const EMAIL = EMAIL_URL.replace(/^mailto:/, "");
@@ -12,15 +14,16 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__top">
           <div className="footer__brand">
-            <a className="brand" href="#top">
-              <span className="brand__badge">H</span>
+            <a className="brand" href="/">
+              <span className="brand__badge">N</span>
               <span className="brand__name">
-                Hamza Studio<span className="dot">.</span>
+                {BRAND}
+                <span className="dot">.</span>
               </span>
             </a>
             <p>
-              Modern websites for small businesses that want to look professional and win more
-              business. Good days, all ways.
+              We design, redesign and grow websites for SMEs in the UK, Qatar and beyond — plus the
+              SEO that helps people find them. Good days, all ways.
             </p>
             <div className="footer__stamp">
               <StampBadge id="foot" />
@@ -28,51 +31,52 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Studio</h4>
+            <h4>Services</h4>
             <ul>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#how">How it works</a></li>
-              <li><a href="#contact">Get a quote</a></li>
-              <li><a href="#top">About Hamza</a></li>
+              {SERVICES.map((s) => (
+                <li key={s.slug}>
+                  <a href={`/services/${s.slug}`}>{s.navLabel}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4>Get started</h4>
+            <h4>Explore</h4>
             <ul>
-              <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    open();
-                  }}
-                >
-                  Send a voice note
-                </a>
-              </li>
-              <li><a href={EMAIL_URL}>Email me</a></li>
-              <li>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  WhatsApp
-                </a>
-              </li>
-              <li><a href="#contact">Book a call</a></li>
+              <li><a href="/work">Work</a></li>
+              <li><a href="/book">Book a call</a></li>
+              <li><a href="/#contact">Contact</a></li>
+              <li><a href="/#areas">Areas we serve</a></li>
+              <li><a href="/privacy">Privacy</a></li>
             </ul>
           </div>
 
           <div>
             <h4>Say hi</h4>
             <ul>
-              <li><a href={EMAIL_URL}>{EMAIL}</a></li>
               <li>
-                <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer">
-                  @hamzastudio86
+                <a
+                  href="/#contact"
+                  onClick={(e) => {
+                    if (window.location.pathname === "/") {
+                      e.preventDefault();
+                      open();
+                    }
+                  }}
+                >
+                  Send a voice note
                 </a>
               </li>
+              <li><a href={EMAIL_URL}>{EMAIL}</a></li>
               <li>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer">
+                  @hamzastudio86
                 </a>
               </li>
             </ul>
@@ -80,7 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} Hamza Studio. Built by hand, launched fast.</span>
+          <span>© {new Date().getFullYear()} {BRAND}. Websites &amp; SEO for SMEs · UK · Qatar · Remote.</span>
           <div className="footer__social">
             <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -99,9 +103,6 @@ export default function Footer() {
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L8 21H5l7.5-8.6L4.6 3H11l4.5 5.6Z" />
               </svg>
-            </a>
-            <a href="#privacy" aria-label="Privacy policy" style={{ width: "auto", borderRadius: "999px", padding: "0 16px", fontWeight: 700, fontSize: ".82rem" }}>
-              Privacy
             </a>
           </div>
         </div>

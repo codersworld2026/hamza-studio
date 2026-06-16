@@ -1,9 +1,9 @@
 const ITEMS = [
-  "Good days, all ways",
-  "Modern websites · real results",
+  "Websites & SEO for SMEs",
+  "We design · we redesign · we rank",
+  "UK · Qatar · Remote",
   "Just send a voice note",
-  "Built by hand, launched fast",
-  "Small business, big energy",
+  "Good days, all ways",
 ];
 
 export default function Marquee() {

@@ -1,14 +1,14 @@
 import { EMAIL_URL, WHATSAPP_URL } from "../config/contact.js";
 
-const LAST_UPDATED = "27 April 2026";
-const BUSINESS_NAME = "Hamza Studio (Hamza Suliman, sole trader)";
+const LAST_UPDATED = "16 June 2026";
+const BUSINESS_NAME = "Northlight Studios (Hamza Suliman, sole trader)";
 const EMAIL = EMAIL_URL.replace(/^mailto:/, "");
 const WHATSAPP_LABEL = WHATSAPP_URL.replace(/^https?:\/\//, "");
 
 export default function Privacy() {
   return (
     <article className="legal">
-      <a className="legal__back" href="#">
+      <a className="legal__back" href="/">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M19 12H5M11 18l-6-6 6-6" />
         </svg>
@@ -33,7 +33,7 @@ export default function Privacy() {
 
       <Section title="1. Who we are">
         <p>
-          {BUSINESS_NAME} (“we”, “us”, “Hamza Studio”) operates this website. We are the data
+          {BUSINESS_NAME} (“we”, “us”, “Northlight Studios”) operates this website. We are the data
           controller for any personal data you choose to share with us.
         </p>
         <p>
