@@ -22,8 +22,9 @@ export default function Footer() {
               </span>
             </a>
             <p>
-              We design, redesign and grow websites for SMEs in the UK, Qatar and beyond — plus the
-              SEO that helps people find them. Good days, all ways.
+              We build websites, apps and Shopify tools for small to medium businesses with
+              1&ndash;50 employees in the UK, Qatar and beyond — plus the SEO that helps people find
+              them. Good days, all ways.
             </p>
             <div className="footer__stamp">
               <StampBadge id="foot" />
@@ -84,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} {BRAND}. Websites &amp; SEO for SMEs · UK · Qatar · Remote.</span>
+          <span>© {new Date().getFullYear()} {BRAND}. Websites, apps &amp; SEO for small businesses · UK · Qatar · Remote.</span>
           <div className="footer__social">
             <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">

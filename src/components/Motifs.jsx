@@ -1,5 +1,5 @@
 /* ============================================================
-   HAMZA STUDIO × SUNNY CLUB — retro SVG motifs
+   NORTHLIGHT STUDIOS × SUNNY CLUB — retro SVG motifs
    Ported from the design prototype's app.js into React components.
    ============================================================ */
 

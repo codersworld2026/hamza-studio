@@ -12,8 +12,8 @@ export default function Work() {
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Work" }]} />
           <h1>Our work</h1>
           <p className="lede">
-            A look at websites and SEO projects we&rsquo;ve delivered for SMEs — with the results that
-            matter. UK, Qatar and remote.
+            A look at websites, apps and SEO projects we&rsquo;ve delivered for small to medium
+            businesses — with the results that matter. UK, Qatar and remote.
           </p>
         </div>
       </section>

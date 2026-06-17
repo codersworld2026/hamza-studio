@@ -1,4 +1,4 @@
-// Real contact details for Hamza Studio.
+// Real contact details for Northlight Studios.
 export const WHATSAPP_URL = "https://wa.me/447493733103";
 export const EMAIL_URL = "mailto:Hamzaxsuliman@icloud.com";
 

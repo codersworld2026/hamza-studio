@@ -8,9 +8,9 @@ export default function AreasWeServe() {
         <div className="section-head reveal">
           <span className="eyebrow">Areas we serve</span>
           <h2>
-            Working with SMEs <em>near and far</em>
+            Working with businesses <em>near and far</em>
           </h2>
-          <p>Based in the UK, connected to Qatar and the Middle East, and set up to work remotely with SMEs anywhere.</p>
+          <p>Based in the UK, connected to Qatar and the Middle East, and set up to work remotely with small to medium businesses anywhere.</p>
         </div>
 
         <div className="areas__grid">

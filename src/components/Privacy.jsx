@@ -1,7 +1,7 @@
 import { EMAIL_URL, WHATSAPP_URL } from "../config/contact.js";
 
 const LAST_UPDATED = "16 June 2026";
-const BUSINESS_NAME = "Northlight Studios (Hamza Suliman, sole trader)";
+const BUSINESS_NAME = "Northlight Studios";
 const EMAIL = EMAIL_URL.replace(/^mailto:/, "");
 const WHATSAPP_LABEL = WHATSAPP_URL.replace(/^https?:\/\//, "");
 
@@ -34,7 +34,7 @@ export default function Privacy() {
 
       <Section title="1. Who we are">
         <p>
-          {BUSINESS_NAME} (“we”, “us”, “Northlight Studios”) operates this website. We are the data
+          {BUSINESS_NAME} (“we”, “us”) operates this website. We are the data
           controller for any personal data you choose to share with us.
         </p>
         <p>

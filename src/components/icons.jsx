@@ -39,6 +39,30 @@ const SERVICE_PATHS = {
       <path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L4 17l3 3 5.5-5.5a4 4 0 0 0 5.2-5.2l-2.3 2.3-2.7-.7-.7-2.7Z" />
     </>
   ),
+  app: (
+    <>
+      <rect x="6" y="2.5" width="12" height="19" rx="3" />
+      <path d="M6 7h12M6 17h12M10.5 19.5h3" />
+    </>
+  ),
+  shopify: (
+    <>
+      <path d="M6.5 8h11l-1 11.5a1.5 1.5 0 0 1-1.5 1.4H9a1.5 1.5 0 0 1-1.5-1.4Z" />
+      <path d="M9 8a3 3 0 0 1 6 0" />
+    </>
+  ),
+  debug: (
+    <>
+      <rect x="8" y="9" width="8" height="10" rx="4" />
+      <path d="M12 9v10M9.5 9 8 6.5M14.5 9 16 6.5M8 12.5H5M16 12.5h3M8 15.5l-2.8 1.5M16 15.5l2.8 1.5" />
+    </>
+  ),
+  automation: (
+    <>
+      <circle cx="12" cy="12" r="3.2" />
+      <path d="M12 4.5v2M12 17.5v2M4.5 12h2M17.5 12h2M6.7 6.7l1.4 1.4M15.9 15.9l1.4 1.4M17.3 6.7l-1.4 1.4M8.1 15.9l-1.4 1.4" />
+    </>
+  ),
 };
 
 export function ServiceIcon({ name, className }) {

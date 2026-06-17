@@ -4,10 +4,11 @@ import { ServiceIcon } from "./icons.jsx";
 import { RainbowWave } from "./Motifs.jsx";
 
 const WHAT_WE_DO = [
-  { slug: "website-design", label: "We design SME websites" },
-  { slug: "website-redesign", label: "We redesign & improve existing sites" },
+  { slug: "website-design", label: "We design & build websites" },
+  { slug: "app-development", label: "We build web & mobile apps" },
+  { slug: "shopify-apps", label: "We build Shopify apps & tools" },
   { slug: "seo", label: "We provide SEO services" },
-  { slug: "website-maintenance", label: "We maintain & update your site" },
+  { slug: "automation", label: "We automate your busywork" },
 ];
 
 export default function Hero() {
@@ -25,11 +26,11 @@ export default function Hero() {
               <svg className="dot-spin" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="m12 3 2.2 5.2L20 10l-5.2 2.2L12 18l-2.2-5.8L4 10l5.8-1.8Z" />
               </svg>
-              Web design &amp; SEO for SMEs
+              Websites, apps &amp; SEO for small businesses
             </span>
 
             <h1 className="reveal" data-d="1">
-              Websites that Help SMEs{" "}
+              Websites &amp; Apps that Help Businesses{" "}
               <span className="grow">
                 Grow
                 <svg viewBox="0 0 220 40" preserveAspectRatio="none" fill="none">
@@ -39,8 +40,9 @@ export default function Hero() {
             </h1>
 
             <p className="hero__lede reveal" data-d="2">
-              We&rsquo;re a web design &amp; SEO studio for SMEs. We build fast, modern websites — and
-              help the right customers find you on Google. UK · Qatar · Remote.
+              We&rsquo;re a web design, app &amp; SEO studio for small to medium businesses with
+              1&ndash;50 employees. We build fast websites, custom apps and Shopify tools, sharpen your
+              SEO, and automate the busywork. UK · Qatar · Remote.
             </p>
 
             <div className="hero__ctas reveal" data-d="2">

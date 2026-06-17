@@ -8,11 +8,11 @@ export default function Services() {
         <div className="section-head reveal">
           <span className="eyebrow">What we do</span>
           <h2>
-            Everything your SME <em>needs</em> online
+            Everything your business <em>needs</em> online
           </h2>
           <p>
-            From first build to ongoing growth — web design, redesign and SEO for SMEs in the UK,
-            Qatar and beyond. One team, start to finish.
+            Websites, apps, Shopify tools, SEO, testing &amp; debugging and automation — everything
+            small to medium businesses with 1&ndash;50 employees need online. One team, start to finish.
           </p>
         </div>
 

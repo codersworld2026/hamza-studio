@@ -7,8 +7,8 @@ export default function Love() {
           <div className="quote-card reveal">
             <div className="mark">“</div>
             <blockquote>
-              Every site we build has one job: make your SME look like the real deal — and bring in
-              more of the right customers.
+              Everything we build has one job: make your business look like the real deal — and bring
+              in more of the right customers.
             </blockquote>
             <div className="who">
               <span className="ava">N</span>

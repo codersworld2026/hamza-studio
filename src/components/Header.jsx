@@ -72,7 +72,7 @@ export default function Header() {
                 {BRAND}
                 <span className="dot">.</span>
               </span>
-              <span className="brand__tag">Websites &amp; SEO that help SMEs grow</span>
+              <span className="brand__tag">Websites, apps &amp; SEO that help businesses grow</span>
             </span>
           </a>
 

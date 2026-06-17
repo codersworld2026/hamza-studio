@@ -1,6 +1,6 @@
 const ITEMS = [
-  "Websites & SEO for SMEs",
-  "We design · we redesign · we rank",
+  "Websites · Apps · Shopify · SEO",
+  "We design · we build · we rank",
   "UK · Qatar · Remote",
   "Just send a voice note",
   "Good days, all ways",

@@ -13,19 +13,19 @@ export const SITE_URL = "https://hamza-studio.pages.dev";
 // type from Cal.com, e.g. "https://cal.eu/hamza-suliman-75oolh/strategy-call".
 export const CAL_BOOKING_URL = "https://www.cal.eu/hamza-suliman-75oolh";
 
-export const TAGLINE = "Websites & SEO that help SMEs grow";
+export const TAGLINE = "Websites, apps & SEO that help businesses grow";
 
 // Where we work — used by the "Areas we serve" section and schema.
 export const AREAS = [
   {
     key: "uk",
     name: "United Kingdom",
-    note: "Web design and SEO for SMEs the length of the UK.",
+    note: "Websites, apps and SEO for small to medium businesses across the UK.",
   },
   {
     key: "qa",
     name: "Qatar & the Middle East",
-    note: "Supporting SMEs in Doha and across the region.",
+    note: "Supporting small to medium businesses in Doha and across the region.",
   },
   {
     key: "remote",

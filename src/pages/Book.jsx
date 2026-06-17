@@ -3,8 +3,8 @@ import BookingEmbed from "../components/BookingEmbed.jsx";
 
 const EXPECT = [
   "A friendly, no-pressure chat — not a sales pitch",
-  "A quick look at your current site (or your idea)",
-  "Honest advice on design, redesign and SEO priorities",
+  "A quick look at your current site, app or idea",
+  "Honest advice on websites, apps, SEO and automation priorities",
   "Clear next steps, whether or not we work together",
 ];
 
@@ -17,8 +17,8 @@ export default function Book() {
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Book a call" }]} />
           <h1>Book a 30-minute strategy call</h1>
           <p className="lede">
-            Pick a time that suits you and we&rsquo;ll talk through your goals, your website and where
-            SEO could help your SME grow — UK, Qatar or fully remote.
+            Pick a time that suits you and we&rsquo;ll talk through your goals and where a new website,
+            app, Shopify tool or SEO could help your business grow — UK, Qatar or fully remote.
           </p>
         </div>
       </section>

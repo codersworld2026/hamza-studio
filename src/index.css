@@ -616,6 +616,8 @@ body::before {
 .whatwedo__list li:nth-child(1) .whatwedo__ic svg { color: #fff; }
 .whatwedo__list li:nth-child(3) .whatwedo__ic { background: var(--sage); }
 .whatwedo__list li:nth-child(4) .whatwedo__ic { background: var(--peach); }
+.whatwedo__list li:nth-child(5) .whatwedo__ic { background: var(--teal); }
+.whatwedo__list li:nth-child(5) .whatwedo__ic svg { color: var(--cream); }
 .whatwedo__label { flex: 1; }
 .whatwedo__arrow { color: var(--orange); display: grid; place-items: center; }
 .whatwedo__all { display: inline-block; margin-top: 16px; font-weight: 900; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
@@ -630,6 +632,11 @@ body::before {
 .svc:nth-child(5) .svc__chip { background: var(--teal); }
 .svc:nth-child(5) .svc__chip svg { color: var(--cream); }
 .svc:nth-child(6) .svc__chip { background: var(--blush); }
+.svc:nth-child(7) .svc__chip { background: var(--orange); }
+.svc:nth-child(7) .svc__chip svg { color: #fff; }
+.svc:nth-child(8) .svc__chip { background: var(--mustard); }
+.svc:nth-child(9) .svc__chip { background: var(--sage); }
+.svc:nth-child(10) .svc__chip { background: var(--peach); }
 
 /* ============================================================
    SHOWCASE ("Good morning" visual moved lower)
